@@ -9,7 +9,9 @@ function distance($a, $b)
 {
   $hamCount = 0;
   for ($i = 0; $i < strlen($a); $i++){
-    if ($a != $b) {
+
+    // have to find the index of each string with [$i]
+    if ($a[$i] != $b[$i]) {
       // doesn't match single one 
       $hamCount += 1;
     }
