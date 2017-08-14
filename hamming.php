@@ -8,13 +8,21 @@
 function distance($a, $b)
 {
   $hamCount = 0;
-  for ($i = 0; $i < strlen($a); $i++){
+  if (strlen($a) == strlen($b)) {
+    for ($i = 0; $i < strlen($a); $i++){
 
     // have to find the index of each string with [$i]
     if ($a[$i] != $b[$i]) {
-      // doesn't match single one 
+      // doesn't match 
       $hamCount += 1;
     }
-  }
+    }
   return $hamCount; 
+  }
+  else {
+    // struggled in invalid 
+    // help via https://stackoverflow.com/questions/28853513/phpunit-test-cases-for-invalidargumentexception
+    throw new \InvalidArgumentException('DNA strands must be of equal length.');
+  }
+  
 }
