@@ -8,6 +8,12 @@
 function distance($a, $b)
 {
     if ($a == $b) {
+      // matches a single one 
       return 0;
+    }
+    else {
+      // doesn't match single one 
+      return 1;
+
     }
 }
