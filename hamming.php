@@ -7,13 +7,12 @@
 
 function distance($a, $b)
 {
-    if ($a == $b) {
-      // matches a single one 
-      return 0;
-    }
-    else {
+  $hamCount = 0;
+  for ($i = 0; $i < strlen($a); $i++){
+    if ($a != $b) {
       // doesn't match single one 
-      return 1;
-
+      $hamCount += 1;
     }
+  }
+  return $hamCount; 
 }
